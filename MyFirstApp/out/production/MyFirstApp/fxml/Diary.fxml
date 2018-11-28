@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="1070.0"
+            style="-fx-background-image: url('file:D:/Downloads/MyFirstApp/src/res/4.jpg');"
+            xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="jav.DiaryController">
+    <children>
+        <MenuBar fx:id="MenuBar" blendMode="SRC_ATOP" prefHeight="25.0" prefWidth="1070.0"
+                 style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu fx:id="file_menu" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="new_menuitem" mnemonicParsing="false" text="New File...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="ANY" meta="UP" shift="UP" shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="open_menuitem" mnemonicParsing="false" text="Open File..."/>
+                        <MenuItem fx:id="save_menuitem" mnemonicParsing="false" text="Save File..."/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="exit_menuitem" mnemonicParsing="false" text="Exit"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="edit_menu" mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="copy_menuitem" mnemonicParsing="false" text="Copy"/>
+                        <MenuItem fx:id="paste_menuitem" mnemonicParsing="false" text="Paste"/>
+                        <MenuItem fx:id="cut_menuitem" mnemonicParsing="false" text="Cut"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="clear_menuitem" mnemonicParsing="false" text="Clear"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="help_menu" mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="about_menuitem" mnemonicParsing="false" text="About TopLevel Diary"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <DatePicker fx:id="MenuDate" layoutX="724.0" layoutY="46.0" minHeight="-Infinity" prefHeight="25.0"
+                    AnchorPane.topAnchor="46.0"/>
+        <TextArea fx:id="text_area" blendMode="LIGHTEN" cacheShape="false" centerShape="false" depthTest="DISABLE"
+                  focusTraversable="false" layoutX="7.0" layoutY="93.0" maxHeight="1.7976931348623157E308"
+                  maxWidth="1.7976931348623157E308" opacity="0.69" prefHeight="567.0" prefWidth="1058.0"
+                  promptText="WRITE HERE..." scaleShape="false" style="-fx-text-fill: BLACK;"
+                  AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0"
+                  AnchorPane.topAnchor="93.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="DISAPPEAR"/>
+            </cursor>
+            <effect>
+                <Glow/>
+            </effect>
+        </TextArea>
+        <Button fx:id="save" layoutX="945.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0"
+                text="Save" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="47.0"/>
+        <MenuButton fx:id="font_size" layoutX="130.0" layoutY="45.0" minHeight="-Infinity" mnemonicParsing="false"
+                    prefHeight="25.0" text="Font Size" wrapText="true">
+            <items>
+                <MenuItem fx:id="px12" mnemonicParsing="false" text="12px"/>
+                <MenuItem fx:id="px15" mnemonicParsing="false" text="15px"/>
+                <MenuItem fx:id="px20" mnemonicParsing="false" text="20px"/>
+                <MenuItem fx:id="px30" mnemonicParsing="false" text="30px"/>
+                <MenuItem fx:id="px45" mnemonicParsing="false" text="45px"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem fx:id="px_custom" mnemonicParsing="false" text="Custom"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="font_color" layoutX="240.0" layoutY="45.0" minHeight="-Infinity" mnemonicParsing="false"
+                    prefHeight="25.0" text="Font Color" wrapText="true">
+            <items>
+                <MenuItem fx:id="black" mnemonicParsing="false" text="Black"/>
+                <MenuItem fx:id="red" mnemonicParsing="false" text="Red"/>
+                <MenuItem fx:id="blue" mnemonicParsing="false" text="Blue"/>
+                <MenuItem fx:id="green" mnemonicParsing="false" text="Green"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem fx:id="color_picker" mnemonicParsing="false" text="Color Picker"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="font_style" layoutX="360.0" layoutY="45.0" minHeight="-Infinity" mnemonicParsing="false"
+                    prefHeight="25.0" text="Font Style">
+            <items>
+                <MenuItem fx:id="normal" mnemonicParsing="false" text="Normal"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem fx:id="bold" mnemonicParsing="false" text="Bold"/>
+                <MenuItem fx:id="italic" mnemonicParsing="false" text="Italic"/>
+            </items>
+        </MenuButton>
+        <MenuButton fx:id="font_family" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0"
+                    prefWidth="95.0" text="Font" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="45.0">
+            <items>
+                <MenuItem fx:id="arial" mnemonicParsing="false" text="Arial"/>
+                <MenuItem fx:id="times" mnemonicParsing="false" text="Times New Roman"/>
+                <MenuItem fx:id="calibri" mnemonicParsing="false" text="Calibri"/>
+                <MenuItem fx:id="segeo" mnemonicParsing="false" text="Segeo Script"/>
+            </items>
+        </MenuButton>
+        <Button fx:id="search" layoutX="639.0" layoutY="45.0" minHeight="-Infinity" mnemonicParsing="false"
+                prefHeight="25.0" text="Search"/>
+        <Button fx:id="logOut" layoutX="986.0" layoutY="668.0" mnemonicParsing="false" prefHeight="26.0"
+                prefWidth="117.0" text="Log out" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="17.0"/>
+        <Label layoutX="478.0" layoutY="662.0" prefHeight="24.0" prefWidth="168.0" text="TopLevel Diary"
+               textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="880.0">
+            <font>
+                <Font name="KacstTitleL" size="19.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

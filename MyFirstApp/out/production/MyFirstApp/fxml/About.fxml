@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" style="-fx-background-image: url('file:D:/Downloads/MyFirstApp/src/res/1.gif');" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="212.0" layoutY="37.0" text="TopLevel Diary" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="188.0" text="27.05.2018" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="77.0" prefHeight="36.0" prefWidth="148.0" text="Aidarbek Zamirbek" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="107.0" prefHeight="36.0" prefWidth="148.0" text="Baisalbek Daniiarov" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="52.0" layoutY="50.0" prefHeight="130.0" prefWidth="129.0" style="-fx-background-image: url('file:/home/anonym/IdeaProjects/MyFirstApp/icon2.png');" />
+   </children>
+</AnchorPane>
